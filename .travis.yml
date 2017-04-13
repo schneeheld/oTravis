@@ -17,14 +17,19 @@ before_install:
   - docker pull ubuntu
 
 before_script:
-- if [ $TRAVIS_OS_NAME == linux ]; then travis_retry make test; fi
+  - make test
+  - ./oTravis
+  - ls -l
+  - uname -a
+  - cat Makefile
 
 script: 
   - docker version
+  - docker start ubuntu
   - docker ps -a
-  - docker exec make test
-  - docker exec ./oTravis
-  - docker exec ls -l
+  - docker exec ubuntu make test
+  - docker exec ubuntu ./oTravis
+  - docker exec ubuntu ls -l
   - docker stop ubuntu
   - docker ps -a
 
