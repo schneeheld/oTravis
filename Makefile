@@ -4,7 +4,7 @@
 
 CC = g++
 
-CXXFLAGS = #-std=c++14
+CXXFLAGS = -std=c++11
 
 EXEC = oTravis
 
