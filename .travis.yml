@@ -1,0 +1,22 @@
+language: cpp
+
+sudo: required
+
+dist: trusty
+
+compiler:
+  - gcc
+
+os:
+  - linux
+
+before_install:
+  - echo $HOSTNAME
+ 
+script: 
+  - docker ps -a 
+  - docker exec ls -la
+  - docker ps -a 
+
+notifications:
+  email: false
