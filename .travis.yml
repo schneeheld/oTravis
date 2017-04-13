@@ -29,9 +29,10 @@ script:
   - docker run -t -d --name=ub1604 ubuntu
 #  - docker run ubuntu
   - docker ps -a
-  - docker exec ub1604 make test
-  - docker exec ub1604 ./oTravis
-#  - docker exec ubuntu ls -l
+#  - docker exec ub1604 make test
+#  - docker exec ub1604 ./oTravis
+  - docker exec ub1604 ls -l
+  - docker exec pwd
   - docker stop ub1604
   - docker ps -a
 #  - docker run -it ubuntu
