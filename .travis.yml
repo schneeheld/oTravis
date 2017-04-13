@@ -12,11 +12,14 @@ os:
 
 before_install:
   - echo $HOSTNAME
- 
+
+before_script:
+- if [ $TRAVIS_OS_NAME == linux ]; then travis_retry make test; fi
+
 script: 
-  - docker ps -a 
-  - docker exec ls -la
-  - docker ps -a 
+  - make 
+  - make test
+  - ./oTravis 
 
 notifications:
   email: false
