@@ -25,13 +25,19 @@ before_script:
 
 script: 
   - docker version
-  - docker start ubuntu
+  - docker images
+  - docker run ubuntu
   - docker ps -a
-  - docker exec ubuntu make test
-  - docker exec ubuntu ./oTravis
-  - docker exec ubuntu ls -l
+#  - docker exec ubuntu make test
+#  - docker exec ubuntu ./oTravis
+#  - docker exec ubuntu ls -l
   - docker stop ubuntu
   - docker ps -a
+  - docker run -it ubuntu
+  - apt-get update
+  - uname -a
+  - make test
+  
 
 notifications:
   email: false
