@@ -30,10 +30,10 @@ script:
 #  - docker run ubuntu
   - docker ps -a
 #  - docker exec ub1604 make test
-#  - docker exec ub1604 ./oTravis
+  - docker exec ub1604 g++ --version
   - docker exec ub1604 ls -l
   - docker exec ub1604 pwd
-  - docker exec ub1604 cd
+  - docker exec ub1604 cd /home
   - docker exec ub1604 ls -l    
   - docker stop ub1604
   - docker ps -a
