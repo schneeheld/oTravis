@@ -1,25 +1,26 @@
-language: cpp
-
 sudo: required
-
-dist: trusty
-
-compiler:
-  - gcc
 
 os:
   - linux
 
+dist: trusty
+
+services:
+  - docker
+
+language: cpp
+
+compiler:
+  - gcc
+
 before_install:
-  - echo $HOSTNAME
+  - docker pull ubuntu
 
 before_script:
 - if [ $TRAVIS_OS_NAME == linux ]; then travis_retry make test; fi
 
 script: 
-  - make 
   - make test
-  - ./oTravis 
 
 notifications:
   email: false
