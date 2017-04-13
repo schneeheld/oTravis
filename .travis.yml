@@ -20,7 +20,13 @@ before_script:
 - if [ $TRAVIS_OS_NAME == linux ]; then travis_retry make test; fi
 
 script: 
-  - make test
+  - docker version
+  - docker ps -a
+  - docker exec make test
+  - docker exec ./oTravis
+  - docker exec ls -l
+  - docker stop ubuntu
+  - docker ps -a
 
 notifications:
   email: false
