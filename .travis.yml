@@ -17,7 +17,7 @@ before_install:
   - docker pull ubuntu
 
 install:
-  - docker build github.com/schneeheld/oTravis
+#  - docker build github.com/schneeheld/oTravis
 
 before_script:
 #  - make test
