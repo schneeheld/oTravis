@@ -26,17 +26,18 @@ before_script:
 script: 
   - docker version
   - docker images
-  - docker run ubuntu
+  - docker run -t -d --name=ub1604 ubuntu
+#  - docker run ubuntu
   - docker ps -a
-#  - docker exec ubuntu make test
-#  - docker exec ubuntu ./oTravis
+  - docker exec ub1604 make test
+  - docker exec ub1604 ./oTravis
 #  - docker exec ubuntu ls -l
-  - docker stop ubuntu
+  - docker stop ub1604
   - docker ps -a
-  - docker run -it ubuntu
-  - apt-get update
-  - uname -a
-  - make test
+#  - docker run -it ubuntu
+#  - apt-get update
+#  - uname -a
+#  - make test
   
 
 notifications:
