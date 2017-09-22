@@ -11,7 +11,7 @@ language: cpp
 compiler: gcc
 
 before_install:
-  - docker pull ubuntu
+  - docker pull ubuntu:latest
 
 install:
 #  - docker build github.com/schneeheld/oTravis
@@ -29,14 +29,14 @@ script:
   - docker run -d --name=ub1604 ubuntu
 #  - docker run ubuntu
   - docker ps -a
-  - docker exec ubuntu apt-get install g++
-  - docker exec ubuntu g++ --version
-  - docker exec ubuntu ls -l
-  - docker exec ubuntu make test
-  - docker exec ./oTravis
+#  - docker exec ubuntu apt-get install g++
+  - docker exec ub1604 g++ --version
+  - docker exec ub1604 ls -l
+  - docker exec ub1604 make test
+  - docker exec ub1604 ./oTravis
 #  - docker exec ub1604 pwd
-  - docker exec ubuntu cd /home
-  - docker exec ububtu ./oTravis
+#  - docker exec ubuntu cd /home
+#  - docker exec ububtu ./oTravis
   - docker stop ubuntu
   - docker ps -a
 #  - docker run -it ubuntu
