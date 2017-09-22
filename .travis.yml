@@ -29,15 +29,15 @@ script:
   - docker run -d --name=ub1604 ubuntu
 #  - docker run ubuntu
   - docker ps -a
-  - docker exec ub1604 apt-get install g++
-  - docker exec ub1604 g++ --version
-  - docker exec ub1604 ls -l
-  - docker exec ub1604 make test
+  - docker exec ubuntu apt-get install g++
+  - docker exec ubuntu g++ --version
+  - docker exec ubuntu ls -l
+  - docker exec ubuntu make test
   - docker exec ./oTravis
 #  - docker exec ub1604 pwd
-  - docker exec ub1604 cd /home
-  - docker exec ub1604 ./oTravis
-  - docker stop ub1604
+  - docker exec ubuntu cd /home
+  - docker exec ububtu ./oTravis
+  - docker stop ubuntu
   - docker ps -a
 #  - docker run -it ubuntu
 #  - apt-get update
