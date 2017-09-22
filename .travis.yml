@@ -26,15 +26,17 @@ before_script:
 script: 
 #  - docker version
   - docker images
-  - docker run -t -d --name=ub1604 ubuntu
+  - docker run -d --name=ub1604 ubuntu
 #  - docker run ubuntu
   - docker ps -a
-#  - docker exec ub1604 apt-get install g++
-#  - docker exec ub1604 g++ --version
-#  - docker exec ub1604 ls -l
+  - docker exec ub1604 apt-get install g++
+  - docker exec ub1604 g++ --version
+  - docker exec ub1604 ls -l
+  - docker exec ub1604 make test
+  - docker exec ./oTravis
 #  - docker exec ub1604 pwd
-#  - docker exec ub1604 cd /home
-#  - docker exec ub1604 ls -l    
+  - docker exec ub1604 cd /home
+  - docker exec ub1604 ./oTravis
   - docker stop ub1604
   - docker ps -a
 #  - docker run -it ubuntu
