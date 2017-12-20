@@ -34,7 +34,7 @@ script:
   - docker run -d -t --name=ub1604 ubuntu
 #  - docker run ubuntu
   - docker ps -a
-  - docker exec ub1604 sudo apt-get install -y g++
+  - docker exec ub1604 apt-get install -y g++
 #  - docker exec ub1604 g++ --version
   - docker exec ub1604 ls -l /usr/bin | grep g++
 #  - docker exec ub1604 make test
