@@ -24,9 +24,10 @@ install:
 before_script:
 #  - make test
 #  - ./oTravis
-#  - ls -l
+  - pwd
+  - ls -l
 #  - uname -a
-#  - cat Makefile
+  - cat Makefile
 
 script: 
 #  - docker version
