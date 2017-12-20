@@ -11,7 +11,8 @@ language: cpp
 compiler: gcc
 
 before_install:
-  - docker pull ubuntu:latest
+  - docker pull gcc:5
+  # - docker pull ubuntu:latest
   # C++14
   # - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   # - sudo apt-get update -qq
@@ -32,19 +33,20 @@ before_script:
 script: 
 #  - docker version
   - docker images
-  - docker run -e JAVA_OPTS='-Duser.timezone=Europe/paris' -d -t --name=ub1604 ubuntu
+  - docker run -d -t --name=ub1604 gcc
 #  - docker run ubuntu
   - docker ps -a
 #  - docker exec ub1604 apt-get install -y g++
   - docker exec ub1604 date
   - docker exec ub1604 pwd
 #  - docker exec ub1604 ls -l /usr/bin | grep g++
-#  - docker exec ub1604 make test
-#  - docker exec ub1604 ./oTravis
+  - docker exec ub1604 make test
+  - docker exec ub1604 ./oTravis
   - docker exec ub1604 ls -l
 #  - docker exec ub1604 cd /home
   - docker exec ub1604 ls -l
-#  - docker exec ub1604 gcc --version
+  - docker exec ub1604 gcc --version
+  - docker exec ub1604 g++ --version
 #  - docker exec ububtu ./oTravis
   - docker stop ub1604
   - docker ps -a
