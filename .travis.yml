@@ -42,7 +42,9 @@ script:
 #  - docker exec ub1604 make test
 #  - docker exec ub1604 ./oTravis
   - docker exec ub1604 ls -l
-#  - docker exec ubuntu cd /home
+  - docker exec ub1604 cd /home
+  - docker exec ub1604 ls -l
+  - docker exec ub1604 gcc --version
 #  - docker exec ububtu ./oTravis
   - docker stop ub1604
   - docker ps -a
