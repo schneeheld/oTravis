@@ -32,7 +32,7 @@ before_script:
 script: 
 #  - docker version
   - docker images
-  - docker run -d -t --name=ub1604 ubuntu
+  - docker run -e JAVA_OPTS='-Duser.timezone=America/Vancouver' -d -t --name=ub1604 ubuntu
 #  - docker run ubuntu
   - docker ps -a
 #  - docker exec ub1604 apt-get install -y g++
@@ -42,7 +42,7 @@ script:
 #  - docker exec ub1604 make test
 #  - docker exec ub1604 ./oTravis
   - docker exec ub1604 ls -l
-  - docker exec ub1604 cd /home
+#  - docker exec ub1604 cd /home
   - docker exec ub1604 ls -l
   - docker exec ub1604 gcc --version
 #  - docker exec ububtu ./oTravis
