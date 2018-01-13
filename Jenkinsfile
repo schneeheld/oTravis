@@ -6,5 +6,15 @@ pipeline {
                 echo "Welcome. build: $BUILD_NUMBER"
             }
         }
+        stage('Build') {
+            steps {
+                sh 'make'
+            }
+        }        
+        stage('Test') {
+            steps {
+                sh 'make test'
+            }
+        }        
     }
 }
