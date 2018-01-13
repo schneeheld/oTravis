@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Greeting') {
             steps {
-                echo "Welcome. build: $BUILD_NUMBER"
+                echo "Welcome."
+                echo "build: $BUILD_NUMBER"
             }
         }
         stage('Build') {
@@ -14,6 +15,11 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'make test'
+            }
+        }
+        stage('Report') {
+            steps {
+                echo "Final report."
             }
         }        
     }
