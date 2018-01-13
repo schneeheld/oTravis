@@ -33,7 +33,7 @@ before_script:
 script: 
 #  - docker version
   - docker images
-  - docker run -d -t --name=ub1604 gcc
+  - docker run -d -t --name=ub1604 gcc:5
   - docker ps -all
 #  - docker run gcc /bin/sh -c "cd /usr/src"
 #  - docker exec ub1604 date
