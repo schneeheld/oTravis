@@ -21,9 +21,9 @@ void Tria::show() {
 	std::array<size_t, 3> tuple = { this->a, this->b, this->c };
 	// ranged for loop is supported
 	for (const auto& t : tuple) {
-		std::cout << t << ' ';
+		std::cout << "[DEV]" << t << ' ';
 	}
-	std:: cout << std::endl;	
+	std::cout << "[DEV]" << std::endl;	
 }
 
 Tria::~Tria() {
