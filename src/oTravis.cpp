@@ -12,9 +12,8 @@
 using namespace std;
 
 int main() {
-	cout << "[DEV]" << endl;
 	
-	cout << "oTravis C++14 project" << endl;
+	cout << "[DEV]" << "oTravis C++14 project" << endl;
 
 	cout << "[DEV]" << endl;
 	
