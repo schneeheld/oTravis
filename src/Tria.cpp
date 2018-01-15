@@ -20,7 +20,7 @@ void Tria::show() {
 	std::array<size_t, 3> tuple = { this->a, this->b, this->c };
 	// ranged for loop is supported
 
-	cout << "[DEV]";
+	std::cout << "[DEV]";
 	
 	for (const auto& t : tuple) {
 		std::cout << t << ' ';
