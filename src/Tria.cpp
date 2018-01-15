@@ -14,6 +14,7 @@ Tria::Tria() : Tria(0, 0, 0) {
 }
 
 Tria::Tria(size_t s1, size_t s2, size_t s3) : a(s1), b(s2), c(s3) {
+	std::cout << "[DEV]" << "Initialize Tria(a,b,c)" << std::endl;
 }
 
 void Tria::show() {
