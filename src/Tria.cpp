@@ -27,7 +27,7 @@ void Tria::show() {
 }
 
 Tria::~Tria() {
-	// TODO Auto-generated destructor stub
+	TODO Auto-generated destructor stub
 }
 
 } /* namespace OTravis */
