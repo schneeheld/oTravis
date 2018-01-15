@@ -9,12 +9,11 @@
 
 namespace oTravis {
 
-Tria::Tria() :
-		Tria(0, 0, 0) {
+Tria::Tria() : Tria(0, 0, 0) {
+	std::cout << "[DEV]" << "Initialize Tria()" << std::endl;
 }
 
-Tria::Tria(size_t s1, size_t s2, size_t s3) :
-		a(s1), b(s2), c(s3) {
+Tria::Tria(size_t s1, size_t s2, size_t s3) : a(s1), b(s2), c(s3) {
 }
 
 void Tria::show() {
@@ -27,7 +26,7 @@ void Tria::show() {
 }
 
 Tria::~Tria() {
-	// TODO Auto-generated destructor stub
+	std::cout << "[DEV]" << "Destroy ~Tria()" << std::endl;
 }
 
 } /* namespace OTravis */
