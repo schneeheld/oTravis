@@ -14,3 +14,8 @@ git commit -m 'Documentation update [ci skip]'
 ```
 
 ### Polling
+
+To enable cross-platform polling
+- Add **Global Tool Configuration** name `GIT` path `git` e.g. Linux client master 
+- Navigate to **ManageJenkins > Manage Nodes**
+
