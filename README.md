@@ -17,5 +17,6 @@ git commit -m 'Documentation update [ci skip]'
 
 To enable cross-platform polling
 - Add **Global Tool Configuration** name `GIT` path `git` e.g. Linux client master 
-- Navigate to **ManageJenkins > Manage Nodes**
-
+- Navigate to **ManageJenkins > Manage Nodes** and configure the agent properties
+- Under **Node Properties** check **Tool Locations** and the **Add**
+- Select `(Git) GIT` and set `C:\Program Files\Git\bin\git.exe` in the Home field
