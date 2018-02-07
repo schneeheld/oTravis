@@ -12,3 +12,5 @@ that you do not want to perform tests for the next push.
 ```
 git commit -m 'Documentation update [ci skip]'
 ```
+
+### Polling
