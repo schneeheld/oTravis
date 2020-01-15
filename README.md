@@ -13,7 +13,7 @@ that you do not want to perform tests for the next push.
 git commit -m 'Documentation update [ci skip]'
 ```
 
-### Polling
+## Polling
 
 To enable cross-platform polling
 - Open a Jenkins client master
@@ -21,3 +21,6 @@ To enable cross-platform polling
 - Navigate to **Manage Jenkins** > **Manage Nodes** and configure the agent properties
 - Under **Node Properties** check **Tool Locations** and click the **Add** button
 - Select `(Git) GIT` and set `C:\Program Files\Git\bin\git.exe` in the Home field
+
+### Selective polling with Jenkins git plugin
+
